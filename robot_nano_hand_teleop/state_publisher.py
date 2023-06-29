@@ -29,8 +29,27 @@ class StatePublisher(Node):
 				joint_state.header.stamp = now.to_msg()
 				joint_state.name = ['base_palm_joint',\
 							'palm_finger1_1_joint',\
-							'finger1_1_finger1_2_joint']
-				joint_state.position = [angle, angle, angle]
+							'finger112_joint',\
+							'finger123_joint',\
+							'finger134_joint',\
+							'palm_finger21_joint',\
+							'finger212_joint',\
+							'finger223_joint',\
+							'finger234_joint',\
+							'palm_finger3_1_joint',\
+							'finger312_joint',\
+							'finger323_joint',\
+							'finger334_joint',\
+							'palm_finger41_joint',\
+							'finger412_joint',\
+							'finger423_joint',\
+							'finger434_joint',\
+							'palm_finger51_joint',\
+							'finger512_joint',\
+							'finger523_joint',\
+							'finger534_joint'
+							]
+				joint_state.position = [angle, angle, angle,angle,angle, angle, angle,angle,angle,angle, angle,angle,angle, angle, angle,angle,angle,angle, angle,angle,angle]
 				# send the joint state
 				self.joint_pub.publish(joint_state)
 
